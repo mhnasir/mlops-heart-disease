@@ -1,5 +1,5 @@
 
-# Fully Working MLOps Heart Disease Project - Assingnment Group 
+# Heart Disease Project - MLOPS Assingnment - 1
 CI/CD - Full Implemetation
  Sem 3 Group 86 
 =======
