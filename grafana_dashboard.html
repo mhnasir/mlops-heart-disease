@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Monitoring Dashboard (Grafana Style)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0b0f14;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #22c55e;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    canvas {
+      background: #111827;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📊 Heart Disease API – Monitoring Dashboard</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>API Request Count</h3>
+    <canvas id="requestsChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h3>API Latency (ms)</h3>
+    <canvas id="latencyChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h3>Error Rate (%)</h3>
+    <canvas id="errorChart"></canvas>
+  </div>
+
+</div>
+
+<footer>
+  Dummy Grafana-style monitoring dashboard for academic demonstration
+</footer>
+
+<script>
+const labels = ["10:00","10:05","10:10","10:15","10:20","10:25","10:30"];
+
+new Chart(document.getElementById("requestsChart"), {
+  type: "line",
+  data: {
+    labels: labels,
+    datasets: [{
+      label: "Requests",
+      data: [120, 150, 180, 170, 210, 240, 260],
+      borderColor: "#22c55e",
+      tension: 0.4
+    }]
+  }
+});
+
+new Chart(document.getElementById("latencyChart"), {
+  type: "line",
+  data: {
+    labels: labels,
+    datasets: [{
+      label: "Latency (ms)",
+      data: [120, 135, 140, 150, 145, 160, 155],
+      borderColor: "#38bdf8",
+      tension: 0.4
+    }]
+  }
+});
+
+new Chart(document.getElementById("errorChart"), {
+  type: "bar",
+  data: {
+    labels: labels,
+    datasets: [{
+      label: "Error %",
+      data: [1, 0.5, 0.8, 1.2, 0.6, 0.4, 0.9],
+      backgroundColor: "#ef4444"
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
