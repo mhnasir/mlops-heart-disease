@@ -1,0 +1,33 @@
+
+MLOPS ASSIGNMENT – I
+End-to-End ML Pipeline for Heart Disease Prediction
+
+1. Introduction
+This project demonstrates an end-to-end MLOps workflow for deploying a machine learning model.
+
+2. Dataset Description
+The UCI Heart Disease dataset contains patient health indicators and a binary target.
+
+3. Exploratory Data Analysis
+EDA was performed to understand distributions, correlations, and class balance.
+
+4. Feature Engineering
+Numerical features were scaled using StandardScaler.
+
+5. Model Development
+Logistic Regression and Random Forest models were trained and evaluated.
+
+6. Experiment Tracking
+MLflow was used to track experiments, parameters, metrics, and models.
+
+7. CI/CD Pipeline
+GitHub Actions automates testing and training on every push.
+
+8. Containerization
+FastAPI-based inference service was containerized using Docker.
+
+9. Deployment
+The Docker image was deployed using Kubernetes manifests.
+
+10. Conclusion
+The project follows industry-standard MLOps practices and is production-ready.
