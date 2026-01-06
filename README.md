@@ -1,3 +1,3 @@
-# MLOps Heart Disease Prediction Project
+# MLOps Heart Disease Prediction Project Assignment 1 
 
-End-to-end MLOps pipeline.
+ Sem 3 Group 86 
